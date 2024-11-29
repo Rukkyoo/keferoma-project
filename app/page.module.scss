@@ -266,7 +266,7 @@
     }
   }
 
-  /* About Product */
+  /* Why Choose Us */
   .product-highlights {
     padding-bottom: 20px;
     width: 97.5vw;
@@ -282,6 +282,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     width: 97.5vw;
+    border-radius: 10px;
     text-align: left;
     padding-left: 20px;
   }
@@ -289,6 +290,7 @@
     background: linear-gradient(to left, #43ad47, #ffffff);
     padding-top: 20px;
     padding-bottom: 20px;
+    border-radius: 10px;
     width: 97.5vw;
     text-align: right;
     padding-right: 20px;
@@ -298,13 +300,34 @@
     background: linear-gradient(to right, #43ad47, #ffffff);
     padding-top: 20px;
     padding-bottom: 20px;
+    border-radius: 10px;
+    width: 97.5vw;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  .highlight4 {
+    background: linear-gradient(to left, #43ad47, #ffffff);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    width: 97.5vw;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 20px;
+  }
+  .highlight5 {
+    background: linear-gradient(to right, #43ad47, #ffffff);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
     width: 97.5vw;
     text-align: left;
     padding-left: 20px;
     margin-top: 20px;
   }
 
-  /* About Product */
+  /* About Us */
   .about {
     display: flex;
     flex-direction: column;
@@ -330,6 +353,9 @@
     text-align: left;
     padding-left: 20px;
     padding-right: 20px;
+    a:hover {
+      color: black;
+    }
   }
 
   .footer{
@@ -340,11 +366,13 @@
     align-items: center;
     padding: 10px;
     color: #ffffff;
-
+    a:hover {
+      color: black;
+    }
   }
 }
 
-/* About Product */
+/* Why Choose Us */
 .product-highlights {
   display: flex;
   flex-direction: column;
@@ -356,7 +384,59 @@
   text-align: center;
 }
 
-.highlight {
+/* .highlights{
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: bisque;
+} */
+
+.highlight1 {
+  background: linear-gradient(to right, #43ad47, #ffffff);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 93.5vw;
+  border-radius: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+.highlight2 {
+  background: linear-gradient(to left, #43ad47, #ffffff);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  width: 93.5vw;
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+.highlight3 {
+  background: linear-gradient(to right, #43ad47, #ffffff);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  width: 93.5vw;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.highlight4 {
+  background: linear-gradient(to left, #43ad47, #ffffff);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  width: 93.5vw;
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+.highlight5 {
+  background: linear-gradient(to right, #43ad47, #ffffff);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  width: 93.5vw;
+  text-align: left;
+  padding-left: 20px;
   margin-top: 20px;
 }
 
@@ -368,8 +448,10 @@
   padding-left: 50px;
   padding-bottom: 50px;
   height: fit-content;
-  text-align: center;
+  text-align: left;
 }
+
+
 
 /* Footer */
 .footer {

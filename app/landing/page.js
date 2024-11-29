@@ -8,6 +8,8 @@ import { FaRegThumbsUp } from "react-icons/fa";
 import { FiPackage } from "react-icons/fi";
 import { TbTruckDelivery } from "react-icons/tb";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { GiMoneyStack } from "react-icons/gi";
+import { CiUser } from "react-icons/ci";
 
 const Landing = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,10 +53,10 @@ const Landing = () => {
                     <a href="#home">Home</a>
                   </li>
                   <li>
-                    <a href="#products">Shop</a>
+                    <a href="#about">About Us</a>
                   </li>
                   <li>
-                    <a href="#about">About Us</a>
+                    <a href="#products">Shop</a>
                   </li>
                   <li>
                     <a href="#contact">Contact</a>
@@ -69,10 +71,10 @@ const Landing = () => {
                   <a href="#home">Home</a>
                 </li>
                 <li>
-                  <a href="#products">Shop</a>
+                  <a href="#about">About Us</a>
                 </li>
                 <li>
-                  <a href="#about">About Us</a>
+                  <a href="#products">Shop</a>
                 </li>
                 <li>
                   <a href="#contact">Contact</a>
@@ -115,6 +117,23 @@ const Landing = () => {
               <h3>Fast Delivery</h3>
               <p>Quick and reliable shipping</p>
             </div>
+            <div className={styles["highlight4"]}>
+              <GiMoneyStack />
+              <h3>Affordable Pricing</h3>
+              <p>
+                Whether you’re buying in small quantities or bulk, we provide
+                competitive pricing without compromising on quality.
+              </p>
+            </div>
+            <div className={styles["highlight5"]}>
+              <CiUser />
+              <h3>Customer-Centric Approach</h3>
+              <p>
+                Your satisfaction is our top priority. From easy ordering to
+                reliable delivery, we strive to provide a seamless customer
+                experience.
+              </p>
+            </div>
           </div>
         </div>
         <div className={styles["about"]}>
@@ -125,15 +144,24 @@ const Landing = () => {
           <div className={styles["about-description"]}>
             {" "}
             <p>
-              At Keferoma Global Resources, we're committed to bringing you the
-              best groundnut oil on the market. With years of experience in the
-              retail industry, we understand the importance of quality, value,
-              and customer satisfaction.
+              At Keferoma Global Resources, we are key distributors and
+              wholesalers of Grand oil and other consumables. We're committed to
+              bringing you the best groundnut oil on the market. With years of
+              experience in the retail industry, we understand the importance of
+              quality, value, and customer satisfaction.
+              <br />
+              <br />
+              Our clients include families seeking healthy cooking oils, retail
+              shops, restaurants aiming to enhance their dishes, and wholesale
+              businesses needing reliable bulk supplies. No matter the size of
+              your order, we are equipped to serve you with efficiency and
+              professionalism.
+              <br />
+              <br />
+              And we aim to be a leading name in the wholesale and retail
+              industry, recognized for our commitment to quality,
+              sustainability, and customer satisfaction.
             </p>
-          </div>
-          <div className={styles["learn-more"]}>
-            {" "}
-            <a href="#about">Learn More About Us</a>
           </div>
         </div>
       </main>
@@ -147,8 +175,7 @@ const Landing = () => {
             <SiGmail />
           </a>
           <a target="blank" href="https://wa.me/+2348033702460">
-          <IoLogoWhatsapp />
-
+            <IoLogoWhatsapp />
           </a>
         </div>
         <p>
