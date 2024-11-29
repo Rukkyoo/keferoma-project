@@ -32,7 +32,7 @@ const Landing = () => {
 
   return (
     <div className={styles["landing-page-body"]}>
-      <header className={styles["header"]}>
+      <header id="home" className={styles["header"]}>
         <div className={styles["header-content"]}>
           <h1 className={styles["logo"]}>Keferoma Global Resources</h1>
           {isMobile ? (
@@ -86,7 +86,7 @@ const Landing = () => {
       </header>
       <main className={styles["main-content"]}>
         <div className={styles["hero"]}>
-          <div className={styles["hero-content"]}>
+          <div  className={styles["hero-content"]}>
             <h2>Premium Groundnut Oil Retail at Your Fingertips</h2>
             <p>Bringing nature's golden goodness straight to your kitchen</p>
             <a href="#products" className={styles["cta-button"]}>
@@ -136,7 +136,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className={styles["about"]}>
+        <div id="about" className={styles["about"]}>
           <div className={styles["about-title"]}>
             {" "}
             <h2>Your Trusted Groundnut Oil Retailer</h2>
@@ -165,7 +165,7 @@ const Landing = () => {
           </div>
         </div>
       </main>
-      <footer className={styles["footer"]}>
+      <footer id="contact" className={styles["footer"]}>
         <p>&copy; 2024 Keferoma Global Resources.</p>
         <div className={styles["social-links"]}>
           <a target="blank" href="tel:08033702460">
