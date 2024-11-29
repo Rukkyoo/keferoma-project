@@ -7,6 +7,7 @@ import { SiGmail } from "react-icons/si";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { FiPackage } from "react-icons/fi";
 import { TbTruckDelivery } from "react-icons/tb";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Landing = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,14 +138,17 @@ const Landing = () => {
         </div>
       </main>
       <footer className={styles["footer"]}>
-        <p>&copy; 2024 Keferoma Global Resources. All rights reserved.</p>
+        <p>&copy; 2024 Keferoma Global Resources.</p>
         <div className={styles["social-links"]}>
-          Contact Us:
           <a target="blank" href="tel:08033702460">
             <BsFillTelephoneFill />
           </a>
           <a target="blank" href="mailto:keferomaglobalresources@gmail.com">
             <SiGmail />
+          </a>
+          <a target="blank" href="https://wa.me/+2348033702460">
+          <IoLogoWhatsapp />
+
           </a>
         </div>
         <p>
