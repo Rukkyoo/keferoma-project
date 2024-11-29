@@ -99,17 +99,17 @@ const Landing = () => {
         <div className={styles["product-highlights"]}>
           <h2>Why Choose Us?</h2>
           <div className={styles["highlights"]}>
-            <div className={styles["highlight"]}>
+            <div className={styles["highlight1"]}>
               <FaRegThumbsUp />
               <h3>Superior Quality</h3>
               <p>We source only the finest groundnut oil for our customers</p>
             </div>
-            <div className={styles["highlight"]}>
+            <div className={styles["highlight2"]}>
               <FiPackage />
               <h3>Wide Selection</h3>
               <p>Various sizes to suit your needs</p>
             </div>
-            <div className={styles["highlight"]}>
+            <div className={styles["highlight3"]}>
               <TbTruckDelivery />
               <h3>Fast Delivery</h3>
               <p>Quick and reliable shipping</p>
@@ -117,24 +117,45 @@ const Landing = () => {
           </div>
         </div>
         <div className={styles["about"]}>
-          <h2>Your Trusted Groundnut Oil Retailer</h2>
-          <p>
-            At Keferoma Global Resources, we're committed to bringing you the
-            best groundnut oil on the market. With years of experience in the
-            retail industry, we understand the importance of quality, value, and
-            customer satisfaction.
-          </p>
-          <a href="#about" className={styles["learn-more"]}>
-            Learn More About Us
-          </a>
+          <div className={styles["about-title"]}>
+            {" "}
+            <h2>Your Trusted Groundnut Oil Retailer</h2>
+          </div>
+          <div className={styles["about-description"]}>
+            {" "}
+            <p>
+              At Keferoma Global Resources, we're committed to bringing you the
+              best groundnut oil on the market. With years of experience in the
+              retail industry, we understand the importance of quality, value,
+              and customer satisfaction.
+            </p>
+          </div>
+          <div className={styles["learn-more"]}>
+            {" "}
+            <a href="#about">Learn More About Us</a>
+          </div>
         </div>
       </main>
       <footer className={styles["footer"]}>
         <p>&copy; 2024 Keferoma Global Resources. All rights reserved.</p>
         <div className={styles["social-links"]}>
-          <BsFillTelephoneFill />
-          <SiGmail />
+          Contact Us:
+          <a target="blank" href="tel:08033702460">
+            <BsFillTelephoneFill />
+          </a>
+          <a target="blank" href="mailto:keferomaglobalresources@gmail.com">
+            <SiGmail />
+          </a>
         </div>
+        <p>
+          Built by{" "}
+          <a
+            href="https://michael-portfolio-v3-yrkh.vercel.app/"
+            target="blank"
+          >
+            Michael
+          </a>
+        </p>
       </footer>
     </div>
   );
