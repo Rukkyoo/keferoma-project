@@ -2,6 +2,7 @@
 
 import styles from "../page.module.scss";
 import React, { useState, useEffect } from "react";
+import Shop from "../Shop";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import { FaRegThumbsUp } from "react-icons/fa";
@@ -86,7 +87,7 @@ const Landing = () => {
       </header>
       <main className={styles["main-content"]}>
         <div className={styles["hero"]}>
-          <div  className={styles["hero-content"]}>
+          <div className={styles["hero-content"]}>
             <h2>Premium Soya Oil Retail at Your Fingertips</h2>
             <p>Bringing nature's golden goodness straight to your kitchen</p>
             <a href="#products" className={styles["cta-button"]}>
@@ -103,22 +104,22 @@ const Landing = () => {
           <h2>Why Choose Us?</h2>
           <div className={styles["highlights"]}>
             <div className={styles["highlight1"]}>
-              <FaRegThumbsUp />
+              <FaRegThumbsUp title="Thumbs up icon" />
               <h3>Superior Quality</h3>
               <p>We source only the finest soya oil for our customers</p>
             </div>
             <div className={styles["highlight2"]}>
-              <FiPackage />
+              <FiPackage  title="Package icon"/>
               <h3>Wide Selection</h3>
               <p>Various sizes to suit your needs</p>
             </div>
             <div className={styles["highlight3"]}>
-              <TbTruckDelivery />
+              <TbTruckDelivery title="Truck delivery icon"/>
               <h3>Fast Delivery</h3>
               <p>Quick and reliable shipping</p>
             </div>
             <div className={styles["highlight4"]}>
-              <GiMoneyStack />
+              <GiMoneyStack title="Money stack icon"/>
               <h3>Affordable Pricing</h3>
               <p>
                 Whether you’re buying in small quantities or bulk, we provide
@@ -126,7 +127,7 @@ const Landing = () => {
               </p>
             </div>
             <div className={styles["highlight5"]}>
-              <CiUser />
+              <CiUser title="User icon"/>
               <h3>Customer-Centric Approach</h3>
               <p>
                 Your satisfaction is our top priority. From easy ordering to
@@ -164,18 +165,21 @@ const Landing = () => {
             </p>
           </div>
         </div>
+        <div id="products">
+          <Shop />
+        </div>
       </main>
       <footer id="contact" className={styles["footer"]}>
         <p>&copy; 2024 Keferoma Global Resources.</p>
         <div className={styles["social-links"]}>
           <a target="blank" href="tel:08033702460">
-            <BsFillTelephoneFill />
+            <BsFillTelephoneFill title="Telephone icon"/>
           </a>
           <a target="blank" href="mailto:keferomaglobalresources@gmail.com">
-            <SiGmail />
+            <SiGmail title="Gmail Icon"/>
           </a>
           <a target="blank" href="https://wa.me/+2348033702460">
-            <IoLogoWhatsapp />
+            <IoLogoWhatsapp title="Whatsapp Icon"/>
           </a>
         </div>
         <p>
