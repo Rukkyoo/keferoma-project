@@ -13,7 +13,6 @@ const Shop = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    // Implement search functionality here
     console.log("Searching for:", searchTerm);
   };
 

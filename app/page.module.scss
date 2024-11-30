@@ -8,6 +8,7 @@
   font-family: Parkinsans, sans-serif;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   width: 100%;
   height: auto;
 
@@ -492,9 +493,8 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
-  padding-bottom: 10px;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
   width: 100%;
 }
 
