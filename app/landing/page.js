@@ -87,7 +87,7 @@ const Landing = () => {
       <main className={styles["main-content"]}>
         <div className={styles["hero"]}>
           <div  className={styles["hero-content"]}>
-            <h2>Premium Groundnut Oil Retail at Your Fingertips</h2>
+            <h2>Premium Soya Oil Retail at Your Fingertips</h2>
             <p>Bringing nature's golden goodness straight to your kitchen</p>
             <a href="#products" className={styles["cta-button"]}>
               Shop Here
@@ -96,7 +96,7 @@ const Landing = () => {
           <img
             className={styles["hero-image"]}
             src="gnut-group.jpg"
-            alt="Groundnut Oil"
+            alt="Soya Oil"
           />
         </div>
         <div className={styles["product-highlights"]}>
@@ -105,7 +105,7 @@ const Landing = () => {
             <div className={styles["highlight1"]}>
               <FaRegThumbsUp />
               <h3>Superior Quality</h3>
-              <p>We source only the finest groundnut oil for our customers</p>
+              <p>We source only the finest soya oil for our customers</p>
             </div>
             <div className={styles["highlight2"]}>
               <FiPackage />
@@ -139,14 +139,14 @@ const Landing = () => {
         <div id="about" className={styles["about"]}>
           <div className={styles["about-title"]}>
             {" "}
-            <h2>Your Trusted Groundnut Oil Retailer</h2>
+            <h2>Your Trusted Soya Oil Retailer</h2>
           </div>
           <div className={styles["about-description"]}>
             {" "}
             <p>
               At Keferoma Global Resources, we are key distributors and
               wholesalers of Grand oil and other consumables. We're committed to
-              bringing you the best groundnut oil on the market. With years of
+              bringing you the best soya oil on the market. With years of
               experience in the retail industry, we understand the importance of
               quality, value, and customer satisfaction.
               <br />
