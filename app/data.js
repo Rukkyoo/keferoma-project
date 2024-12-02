@@ -15,7 +15,7 @@ export const products = [
     name: "1 litre Grand Soya Oil",
     description: "Certified organic soya oil",
     price: "₦12.99",
-    image: "/images/organic-groundnut-oil-500ml.jpg",
+    image: "gnut-oil.jpg",
     category: "Oils",
     stock: 30
   },

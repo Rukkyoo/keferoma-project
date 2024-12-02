@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./page.module.scss";
+import { products } from "./data";
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 
 const Shop = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [quantities, setQuantities] = useState({});
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -14,6 +16,23 @@ const Shop = () => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     console.log("Searching for:", searchTerm);
+  };
+
+  const updateQuantity = (productId, change) => {
+    setQuantities(prevQuantities => ({
+      ...prevQuantities,
+      [productId]: Math.max(0, (prevQuantities[productId] || 0) + change)
+    }));
+  };
+
+  const addToCart = (productId) => {
+    // Add to cart logic here
+    console.log(`Added product ${productId} to cart with quantity ${quantities[productId]}`);
+    // Optionally reset quantity after adding to cart
+    setQuantities(prevQuantities => ({
+      ...prevQuantities,
+      [productId]: 0
+    }));
   };
 
   return (
@@ -35,7 +54,45 @@ const Shop = () => {
           <CiShoppingCart size={25} title="Shopping cart icon" />
         </div>
       </div>
-      <div className={styles["cart-item-body"]}>Item menu</div>
+      <div className={styles["cart-item-body"]}>
+      {products.map((product) => (
+  <div key={product.id} className={styles["cart-item"]}>
+    <div>
+      <img
+        src={product.image}
+        width={260}
+        alt={product.name}
+      />
+    </div>
+    <div>
+      <span>
+        {product.name}
+        <br />
+        {product.price}
+      </span>
+      <div className={styles["quantity"]}>
+        <button
+          onClick={() => updateQuantity(product.id, -1)}
+          disabled={quantities[product.id] === 0}
+        >
+          -
+        </button>
+        <span>{quantities[product.id] || 0}</span>
+        <button onClick={() => updateQuantity(product.id, 1)}>
+          +
+        </button>
+      </div>
+      <button 
+        className={styles["add-to-cart"]}
+        onClick={() => addToCart(product.id)}
+        disabled={!quantities[product.id]}
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+))}
+      </div>
     </div>
   );
 };
