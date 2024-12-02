@@ -19,19 +19,31 @@ const Shop = () => {
   };
 
   const updateQuantity = (productId, change) => {
-    setQuantities(prevQuantities => ({
+    setQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [productId]: Math.max(0, (prevQuantities[productId] || 0) + change)
+      [productId]: Math.max(0, (prevQuantities[productId] || 0) + change),
     }));
+  };
+
+  const handleInputChange = (productId, value) => {
+    const newValue = parseInt(value, 10);
+    if (!isNaN(newValue)) {
+      setQuantities((prevQuantities) => ({
+        ...prevQuantities,
+        [productId]: Math.max(0, newValue),
+      }));
+    }
   };
 
   const addToCart = (productId) => {
     // Add to cart logic here
-    console.log(`Added product ${productId} to cart with quantity ${quantities[productId]}`);
+    console.log(
+      `Added product ${productId} to cart with quantity ${quantities[productId]}`
+    );
     // Optionally reset quantity after adding to cart
-    setQuantities(prevQuantities => ({
+    setQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [productId]: 0
+      [productId]: 0,
     }));
   };
 
@@ -55,43 +67,45 @@ const Shop = () => {
         </div>
       </div>
       <div className={styles["cart-item-body"]}>
-      {products.map((product) => (
-  <div key={product.id} className={styles["cart-item"]}>
-    <div>
-      <img
-        src={product.image}
-        width={260}
-        alt={product.name}
-      />
-    </div>
-    <div>
-      <span>
-        {product.name}
-        <br />
-        {product.price}
-      </span>
-      <div className={styles["quantity"]}>
-        <button
-          onClick={() => updateQuantity(product.id, -1)}
-          disabled={quantities[product.id] === 0}
-        >
-          -
-        </button>
-        <span>{quantities[product.id] || 0}</span>
-        <button onClick={() => updateQuantity(product.id, 1)}>
-          +
-        </button>
-      </div>
-      <button 
-        className={styles["add-to-cart"]}
-        onClick={() => addToCart(product.id)}
-        disabled={!quantities[product.id]}
-      >
-        Add to Cart
-      </button>
-    </div>
-  </div>
-))}
+        {products.map((product) => (
+          <div key={product.id} className={styles["cart-item"]}>
+            <div>
+              <img src={product.image} width={260} alt={product.name} />
+            </div>
+            <div>
+              <span>
+                {product.name}
+                <br />
+                {product.price}
+              </span>
+              <div className={styles["quantity"]}>
+                <button
+                  onClick={() => updateQuantity(product.id, -1)}
+                  disabled={quantities[product.id] === 0}
+                >
+                  -
+                </button>
+                <input
+                  className={styles["quantity-input"]}
+                  type="number"
+                  min="0"
+                  value={quantities[product.id] || 0}
+                  onChange={(e) =>
+                    handleInputChange(product.id, e.target.value)
+                  }
+                />
+                <button onClick={() => updateQuantity(product.id, 1)}>+</button>
+              </div>
+              <button
+                className={styles["add-to-cart"]}
+                onClick={() => addToCart(product.id)}
+                disabled={!quantities[product.id]}
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
