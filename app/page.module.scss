@@ -517,14 +517,17 @@
 .cart-item{
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 250px;
   background-color: #43ad47;
-  height: fit-content;
+  height: 20%;
   align-items: center;
-  padding: 20px;
   margin-top: 20px;
 
 
+}
+
+.cart-item-details{
+  padding: 20px;
 }
 
 .quantity{

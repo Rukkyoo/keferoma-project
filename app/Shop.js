@@ -70,9 +70,9 @@ const Shop = () => {
         {products.map((product) => (
           <div key={product.id} className={styles["cart-item"]}>
             <div>
-              <img src={product.image} width={260} alt={product.name} />
+              <img src={product.image} width={250} alt={product.name} />
             </div>
-            <div>
+            <div className={styles["cart-item-details"]}>
               <span>
                 {product.name}
                 <br />
