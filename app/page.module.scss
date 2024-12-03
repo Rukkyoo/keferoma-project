@@ -469,8 +469,8 @@
 .search-form {
   display: flex;
   align-items: center;
-  flex-grow: 1;
   margin-right: 20px;
+  width: 80vw;
 }
 
 .search-button {
@@ -486,6 +486,11 @@
 
 .cart-icon {
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  &:hover {
+    color: white;
+  }
 }
 
 .search-bar-container{
@@ -493,8 +498,8 @@
   border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: 10px;
+  justify-content: space-between;
+  padding: 10px 30px 10px 30px;
   align-items: center;
   width: 100%;
 }
@@ -566,6 +571,10 @@
   border: none;
 }
 
+
+.cart-count{
+  font-size: 0.7em;
+}
 /* Cart Modal */
 .cart-modal {
   position: fixed;
