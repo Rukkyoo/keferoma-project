@@ -167,70 +167,72 @@ const Shop = () => {
       </div>
       {cartModal && (
         <div className={styles["cart-modal"]}>
-          <div className={styles["cart-modal-content"]}>
-            <h2>Cart</h2>
-            {cart.length === 0 ? (
-              <p>Your cart is empty</p>
-            ) : (
-              <ul>
-                {cart.map((item) => (
-                  <li key={item.id}>
-                    {item.name} - Quantity: {item.quantity} - Price: ₦
-                    {item.price * item.quantity}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {cart.length > 0 && (
-              <p>
-                Total: ₦
-                {cart.reduce(
-                  (total, item) => total + item.price * item.quantity,
-                  0
-                )}
-              </p>
-            )}
-            {cart.length > 0 && (
-              <form className={styles["form"]} onSubmit={handleSubmit}>
-                <div className={styles["formGroup"]}>
-                  <label htmlFor="name">Name: &nbsp;</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+          <div className={styles["cart-modal-outer"]}>
+            <div className={styles["cart-modal-inner"]}>
+              <h2>Cart</h2>
+              {cart.length === 0 ? (
+                <p>Your cart is empty</p>
+              ) : (
+                <ul>
+                  {cart.map((item) => (
+                    <li key={item.id}>
+                      {item.name} - Quantity: {item.quantity} - Price: ₦
+                      {item.price * item.quantity}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {cart.length > 0 && (
+                <p>
+                  Total: ₦
+                  {cart.reduce(
+                    (total, item) => total + item.price * item.quantity,
+                    0
+                  )}
+                </p>
+              )}
+              {cart.length > 0 && (
+                <form className={styles["form"]} onSubmit={handleSubmit}>
+                  <div className={styles["formGroup"]}>
+                    <label htmlFor="name">Name: &nbsp;</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-                <div className={styles["formGroup"]}>
-                  <label htmlFor="address">Address: &nbsp;</label>
-                  <textarea
-                    id="address"
-                    name="address"
-                    value={formData.address}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+                  <div className={styles["formGroup"]}>
+                    <label htmlFor="address">Address: &nbsp;</label>
+                    <textarea
+                      id="address"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-                <div className={styles["formGroup"]}>
-                  <label htmlFor="dateTime">Date/Time: &nbsp;</label>
-                  <input
-                    type="datetime-local"
-                    id="dateTime"
-                    name="dateTime"
-                    value={formData.dateTime}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <button type="submit" className={styles["submit-button"]}>
-                  Submit
-                </button>
-              </form>
-            )}
+                  <div className={styles["formGroup"]}>
+                    <label htmlFor="dateTime">Date/Time: &nbsp;</label>
+                    <input
+                      type="datetime-local"
+                      id="dateTime"
+                      name="dateTime"
+                      value={formData.dateTime}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <button type="submit" className={styles["submit-button"]}>
+                    Book
+                  </button>
+                </form>
+              )}
+            </div>
             <button
               className={styles["close-button"]}
               onClick={() => setCartModal(false)}
@@ -245,3 +247,45 @@ const Shop = () => {
 };
 
 export default Shop;
+
+/* {cart.length > 0 && (
+  <form className={styles["form"]} onSubmit={handleSubmit}>
+    <div className={styles["formGroup"]}>
+      <label htmlFor="name">Name: &nbsp;</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+    </div>
+
+    <div className={styles["formGroup"]}>
+      <label htmlFor="address">Address: &nbsp;</label>
+      <textarea
+        id="address"
+        name="address"
+        value={formData.address}
+        onChange={handleChange}
+        required
+      />
+    </div>
+
+    <div className={styles["formGroup"]}>
+      <label htmlFor="dateTime">Date/Time: &nbsp;</label>
+      <input
+        type="datetime-local"
+        id="dateTime"
+        name="dateTime"
+        value={formData.dateTime}
+        onChange={handleChange}
+        required
+      />
+    </div>
+    <button type="submit" className={styles["submit-button"]}>
+      Submit
+    </button>
+  </form>
+)} */

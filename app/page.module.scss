@@ -590,7 +590,7 @@
   overflow-y: scroll;
 }
 
-.cart-modal-content {
+/* .cart-modal-content {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
@@ -600,8 +600,28 @@
   max-height: 80vh; // Set a maximum height
    // Enable vertical scrolling
   z-index: 1001;
+} */
+
+.cart-modal-outer {
+  background-color: white;
+  border-radius: 10px; // Adjust as needed
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
 }
 
+.cart-modal-inner {
+  overflow-y: auto;
+  max-height: calc(90vh - 100px); // Adjust based on padding and button height
+  padding-right: 15px; // Compensate for scrollbar
+}
+
+.close-button {
+  margin-top: 15px;
+  align-self: flex-end;
+}
 
 .form {
   max-width: 400px;
