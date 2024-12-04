@@ -11,6 +11,24 @@ const Shop = () => {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [cartModal, setCartModal] = useState(false);
   const [cart, setCart] = useState([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    address: "",
+    dateTime: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -67,7 +85,7 @@ const Shop = () => {
       }));
 
       // Confirmation message
-      alert(`Added ${quantity} ${productToAdd.name}(s) to cart`);
+      /*  alert(`Added ${quantity} ${productToAdd.name}(s) to cart`); */
     }
   };
 
@@ -172,7 +190,53 @@ const Shop = () => {
                 )}
               </p>
             )}
-            <button onClick={() => setCartModal(false)}>Close</button>
+            {cart.length > 0 && (
+              <form className={styles["form"]} onSubmit={handleSubmit}>
+                <div className={styles["formGroup"]}>
+                  <label htmlFor="name">Name: &nbsp;</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className={styles["formGroup"]}>
+                  <label htmlFor="address">Address: &nbsp;</label>
+                  <textarea
+                    id="address"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className={styles["formGroup"]}>
+                  <label htmlFor="dateTime">Date/Time: &nbsp;</label>
+                  <input
+                    type="datetime-local"
+                    id="dateTime"
+                    name="dateTime"
+                    value={formData.dateTime}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <button type="submit" className={styles["submit-button"]}>
+                  Submit
+                </button>
+              </form>
+            )}
+            <button
+              className={styles["close-button"]}
+              onClick={() => setCartModal(false)}
+            >
+              Close
+            </button>
           </div>
         </div>
       )}
