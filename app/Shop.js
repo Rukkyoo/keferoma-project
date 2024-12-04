@@ -15,7 +15,7 @@ const Shop = () => {
     name: "",
     address: "",
     dateTime: "",
-    total: "",
+    total: 0,
   });
 
   const handleChange = (e) => {
@@ -42,6 +42,21 @@ const Shop = () => {
     );
     setFilteredProducts(filtered);
   };
+
+  const updateTotal = () => {
+    const newTotal = cart.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+    setFormData(prevData => ({
+      ...prevData,
+      total: newTotal
+    }));
+  };  
+
+  useEffect(() => {
+    updateTotal();
+  }, [cart]);
 
   const updateQuantity = (productId, change) => {
     setQuantities((prevQuantities) => ({
