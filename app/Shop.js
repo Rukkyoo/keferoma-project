@@ -48,11 +48,11 @@ const Shop = () => {
       (total, item) => total + item.price * item.quantity,
       0
     );
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
-      total: newTotal
+      total: newTotal,
     }));
-  };  
+  };
 
   useEffect(() => {
     updateTotal();
@@ -279,45 +279,3 @@ const Shop = () => {
 };
 
 export default Shop;
-
-/* {cart.length > 0 && (
-  <form className={styles["form"]} onSubmit={handleSubmit}>
-    <div className={styles["formGroup"]}>
-      <label htmlFor="name">Name: &nbsp;</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-    </div>
-
-    <div className={styles["formGroup"]}>
-      <label htmlFor="address">Address: &nbsp;</label>
-      <textarea
-        id="address"
-        name="address"
-        value={formData.address}
-        onChange={handleChange}
-        required
-      />
-    </div>
-
-    <div className={styles["formGroup"]}>
-      <label htmlFor="dateTime">Date/Time: &nbsp;</label>
-      <input
-        type="datetime-local"
-        id="dateTime"
-        name="dateTime"
-        value={formData.dateTime}
-        onChange={handleChange}
-        required
-      />
-    </div>
-    <button type="submit" className={styles["submit-button"]}>
-      Submit
-    </button>
-  </form>
-)} */
