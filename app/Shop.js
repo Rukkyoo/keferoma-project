@@ -15,6 +15,7 @@ const Shop = () => {
     name: "",
     address: "",
     dateTime: "",
+    total: "",
   });
 
   const handleChange = (e) => {
@@ -183,7 +184,7 @@ const Shop = () => {
                 </ul>
               )}
               {cart.length > 0 && (
-                <p>
+                <p className={styles["total"]}>
                   Total: ₦
                   {cart.reduce(
                     (total, item) => total + item.price * item.quantity,
@@ -225,6 +226,22 @@ const Shop = () => {
                       value={formData.dateTime}
                       onChange={handleChange}
                       required
+                    />
+                  </div>
+
+                  <div className={styles["formGroup"]}>
+                    <label htmlFor="total">Total: </label>
+                    <input
+                      type="text"
+                      id="total"
+                      name="total"
+                      value={`₦${cart
+                        .reduce(
+                          (total, item) => total + item.price * item.quantity,
+                          0
+                        )
+                        .toFixed(2)}`}
+                      readOnly
                     />
                   </div>
                   <button type="submit" className={styles["submit-button"]}>
