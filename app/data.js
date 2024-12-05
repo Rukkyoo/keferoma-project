@@ -1,5 +1,3 @@
-// data.js
-
 export const products = [
   {
     id: 1,
@@ -8,7 +6,8 @@ export const products = [
     price: 25000,
     image: "gnut0.5-oil.jpg",
     category: "Oils",
-    stock: 50
+    stock: 50,
+    isSoldOut: false
   },
   {
     id: 2,
@@ -17,7 +16,8 @@ export const products = [
     price: 32460,
     image: "gnut-oil.jpg",
     category: "Oils",
-    stock: 30
+    stock: 30,
+    isSoldOut: false
   },
   {
     id: 3,
@@ -26,7 +26,8 @@ export const products = [
     price: 50990,
     image: "gnut3-oil.jpg",
     category: "Oils",
-    stock: 30
+    stock: 30,
+    isSoldOut: false
   },
   {
     id: 4,
@@ -35,7 +36,8 @@ export const products = [
     price: 62000,
     image: "gnut5-oil.jpg",
     category: "Oils",
-    stock: 30
+    stock: 30,
+    isSoldOut: false
   },
   {
     id: 5,
@@ -44,7 +46,8 @@ export const products = [
     price: 75000,
     image: "gnut10-oil.jpg",
     category: "Oils",
-    stock: 30
+    stock: 30,
+    isSoldOut: false
   },
   {
     id: 6,
@@ -53,7 +56,8 @@ export const products = [
     price: 88000,
     image: "gnut18-oil.jpg",
     category: "Oils",
-    stock: 30
+    stock: 30,
+    isSoldOut: false
   },
   {
     id: 7,
@@ -62,7 +66,8 @@ export const products = [
     price: 96000,
     image: "gnut25-oil.jpg",
     category: "Oils",
-    stock: 30
+    stock: 30,
+    isSoldOut: false
   },
   
 ];

@@ -107,9 +107,9 @@ const Shop = () => {
     }
   };
 
-/* Delete Specific Cart */
+  /* Delete Specific Cart */
   const deleteSpecificCart = (cartId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== cartId));
+    setCart((prevCart) => prevCart.filter((item) => item.id !== cartId));
   };
 
   useEffect(() => {
@@ -146,44 +146,55 @@ const Shop = () => {
       <div className={styles["cart-item-body"]}>
         {filteredProducts.map((product) => (
           <div key={product.id} className={styles["cart-item"]}>
-            <div>
+            <div className={styles["image-container"]}>
               <img
                 src={product.image}
                 className={styles["cart-item-image"]}
                 width={250}
                 alt={product.name}
               />
+              {product.isSoldOut && (
+                <div className={styles["sold-out-overlay"]}>Sold Out</div>
+              )}
             </div>
             <div className={styles["cart-item-details"]}>
               <span>
                 {product.name}
                 <br />₦{product.price}
               </span>
-              <div className={styles["quantity"]}>
-                <button
-                  onClick={() => updateQuantity(product.id, -1)}
-                  disabled={quantities[product.id] === 0}
-                >
-                  -
-                </button>
-                <input
-                  className={styles["quantity-input"]}
-                  type="number"
-                  min="0"
-                  value={quantities[product.id] || 0}
-                  onChange={(e) =>
-                    handleInputChange(product.id, e.target.value)
-                  }
-                />
-                <button onClick={() => updateQuantity(product.id, 1)}>+</button>
-              </div>
-              <button
-                className={styles["add-to-cart"]}
-                onClick={() => addToCart(product.id)}
-                disabled={!quantities[product.id]}
-              >
-                Add to Cart
-              </button>
+              {!product.isSoldOut ? (
+                <>
+                  <div className={styles["quantity"]}>
+                    <button
+                      onClick={() => updateQuantity(product.id, -1)}
+                      disabled={quantities[product.id] === 0}
+                    >
+                      -
+                    </button>
+                    <input
+                      className={styles["quantity-input"]}
+                      type="number"
+                      min="0"
+                      value={quantities[product.id] || 0}
+                      onChange={(e) =>
+                        handleInputChange(product.id, e.target.value)
+                      }
+                    />
+                    <button onClick={() => updateQuantity(product.id, 1)}>
+                      +
+                    </button>
+                  </div>
+                  <button
+                    className={styles["add-to-cart"]}
+                    onClick={() => addToCart(product.id)}
+                    disabled={!quantities[product.id]}
+                  >
+                    Add to Cart
+                  </button>
+                </>
+              ) : (
+                <p className={styles["sold-out-text"]}>This item is sold out</p>
+              )}
             </div>
           </div>
         ))}
