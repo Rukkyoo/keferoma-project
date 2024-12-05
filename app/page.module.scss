@@ -359,7 +359,7 @@
     }
   }
 
-  .footer{
+  .footer {
     width: 97.5vw;
     display: flex;
     flex-direction: row;
@@ -452,9 +452,8 @@
   text-align: left;
 }
 
-
 /* ShoppingCart */
-.shop-container{
+.shop-container {
   display: flex;
   background-color: rgb(240, 237, 236);
   margin-left: 40px;
@@ -493,12 +492,12 @@
   }
 }
 
-.search-bar-container{
+.search-bar-container {
   background-color: #43ad47;
   border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: row;
-justify-content: space-around;
+  justify-content: space-around;
   padding: 10px 30px 10px 30px;
   align-items: center;
   width: 100%;
@@ -512,7 +511,7 @@ justify-content: space-around;
   font-size: 16px;
 }
 
-.cart-item-body{
+.cart-item-body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -521,7 +520,7 @@ justify-content: space-around;
   gap: 20px;
 }
 
-.cart-item{
+.cart-item {
   display: flex;
   flex-direction: column;
   width: 250px;
@@ -530,24 +529,22 @@ justify-content: space-around;
   height: 20%;
   align-items: center;
   margin-top: 20px;
-
-
 }
 
-.cart-item-image{
+.cart-item-image {
   border-radius: 5px 5px 0 0;
 }
 
-.cart-item-details{
+.cart-item-details {
   padding: 20px;
 }
 
-.quantity{
+.quantity {
   display: flex;
   flex-direction: row;
   gap: 10px;
 
-  button{
+  button {
     font-size: 1.2em;
     padding-left: 10px;
     padding-right: 10px;
@@ -557,12 +554,12 @@ justify-content: space-around;
   }
 }
 
-.add-to-cart{
+.add-to-cart {
   font-size: 1em;
   padding: 5px;
 }
 
-.quantity-input{
+.quantity-input {
   width: 20%;
   height: fit-content;
   text-align: center;
@@ -571,8 +568,7 @@ justify-content: space-around;
   border: none;
 }
 
-
-.cart-count{
+.cart-count {
   font-size: 0.7em;
 }
 /* Cart Modal */
@@ -590,14 +586,14 @@ justify-content: space-around;
   overflow-y: scroll;
 }
 
-.total{
+.total {
   font-weight: bolder;
   margin-top: 10px;
 }
 
 .cart-modal-outer {
   background-color: white;
-  border-radius: 10px; 
+  border-radius: 10px;
   padding: 20px;
   max-width: 90%;
   max-height: 90vh;
@@ -608,7 +604,7 @@ justify-content: space-around;
 .cart-modal-inner {
   overflow-y: auto;
   max-height: calc(90vh - 100px);
-  padding-right: 15px; 
+  padding-right: 15px;
 }
 
 .close-button {
@@ -650,23 +646,31 @@ justify-content: space-around;
   }
 }
 
+.trash-icon{
+  margin-left: 3px;
+  cursor: pointer;
+  color: red;
+  &:hover{
+    color: rgb(221, 24, 24);
+  }
+}
 
-.submit-button{
+.submit-button {
   background-color: #ffffff;
   padding: 5px;
   border-radius: 5px;
   margin-top: 20px;
-  &:hover{
+  &:hover {
     background-color: black;
     color: white;
   }
 }
 
-.close-button{
+.close-button {
   background-color: #ffffff;
   padding: 5px;
   border-radius: 5px;
-  &:hover{
+  &:hover {
     background-color: black;
     color: white;
   }
@@ -692,4 +696,3 @@ justify-content: space-around;
     text-decoration: none;
   }
 }
-
