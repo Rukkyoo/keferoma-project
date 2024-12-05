@@ -158,9 +158,11 @@ const Shop = () => {
               )}
             </div>
             <div className={styles["cart-item-details"]}>
-              <span>
+              <span className={styles["cart-item-name"]}>
                 {product.name}
-                <br />₦{product.price}
+                <br />
+                <span className={styles["cart-item-price"]}>₦{product.price}</span>
+                
               </span>
               {!product.isSoldOut ? (
                 <>
