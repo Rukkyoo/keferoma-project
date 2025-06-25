@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Keferoma Global Resources - E-commerce Platform
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Keferoma Global Resources is an e-commerce platform specializing in the retail of premium soya oil. This React-based web application provides customers with an intuitive shopping experience, allowing them to browse products, manage quantities, add items to cart, and complete orders.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+### Landing Page
+- Responsive navigation with mobile-friendly hamburger menu
+- Hero section with call-to-action
+- Product highlights showcasing key benefits
+- About Us section with company information
+- Contact information with social links
+
+### Shop Page
+- Product search functionality
+- Product cards with:
+  - Images
+  - Names
+  - Prices
+  - Quantity controls
+  - Add to cart functionality
+  - Sold out indicators
+- Shopping cart with:
+  - Item listing
+  - Quantity management
+  - Item removal
+  - Order summary
+- Checkout form with:
+  - Customer information collection
+  - Delivery details
+  - Order total calculation
+
+## Technologies Used
+
+### Frontend
+- **React** (v19.0.0-rc) - JavaScript library for building user interfaces
+- **Next.js** (v15.0.3) - React framework for server-side rendering and static site generation
+- **SCSS/SASS** (v1.81.0) - CSS preprocessor for styling
+- **React Icons** (v5.3.0) - Icon library for React applications
+
+### Development Tools
+- **ESLint** - JavaScript linter
+- **Babel** - JavaScript compiler
+- **Vercel** - Deployment platform
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone [(https://github.com/Rukkyoo/keferoma-project)]
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Available Scripts
+
+- `npm run dev`: Starts the development server
+- `npm run build`: Creates a production build
+- `npm start`: Starts the production server
+- `npm run lint`: Runs ESLint
+- `npm run vercel-build`: Build command for Vercel deployment
+
+## Project Structure
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Production Dependencies
+- `next`: ^15.0.3
+- `react`: 19.0.0-rc-66855b96-20241106
+- `react-dom`: 19.0.0-rc-66855b96-20241106
+- `react-icons`: ^5.3.0
+- `sass`: ^1.81.0
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Development Dependencies
+- `@babel/core`: ^7.17.12
+- `babel-loader`: ^8.2.5
+- `eslint`: ^8
+- `eslint-config-next`: 15.0.3
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+## Credits
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Built by [Michael](https://michael-portfolio-v3-yrkh.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025 Keferoma Global Resources. All rights reserved.
