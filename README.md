@@ -72,8 +72,6 @@ Keferoma Global Resources is an e-commerce platform specializing in the retail o
 - `npm run lint`: Runs ESLint
 - `npm run vercel-build`: Build command for Vercel deployment
 
-## Project Structure
-
 ```
 
 ## Dependencies
