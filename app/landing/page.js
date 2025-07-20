@@ -170,22 +170,22 @@ const Landing = () => {
         </div>
       </main>
       <footer id="contact" className={styles["footer"]}>
-        <p>&copy; 2024 Keferoma Global Resources.</p>
+        <p>&copy; 2025 Keferoma Global Resources.</p>
         <div className={styles["social-links"]}>
-          <a target="blank" href="tel:08033702460">
+          <a target="blank" href="tel:08012345678">
             <BsFillTelephoneFill title="Telephone icon"/>
           </a>
-          <a target="blank" href="mailto:keferomaglobalresources@gmail.com">
+          <a target="blank" href="mailto:testemail@gmail.com">
             <SiGmail title="Gmail Icon"/>
           </a>
-          <a target="blank" href="https://wa.me/+2348033702460">
+          <a target="blank" href="https://wa.me/+2348012345678">
             <IoLogoWhatsapp title="Whatsapp Icon"/>
           </a>
         </div>
         <p>
           Built by{" "}
           <a
-            href="https://michael-portfolio-v3-yrkh.vercel.app/"
+            href="https://github.com/rukkyoo/"
             target="blank"
           >
             Michael
